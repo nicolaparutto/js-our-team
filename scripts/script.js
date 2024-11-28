@@ -37,3 +37,33 @@ const teamMembers = [
   }
 ];
 
+//funzione che genera una struttura html per ogni card con i dati necessari
+const generateMemberCard = (member) => {
+  const {name, role, email, img} = member
+  return `<div class="card-col">
+               <div class="card">
+                  <div class="card-img">
+                     <img src="assets/${img}" alt="">
+                  </div>
+                  <div class="card-text">
+                     <h4 id="name">${name}</h4>
+                     <p id="role" class="role">${role}</p>
+                     <p id="mail" class="mail">${email}</p>
+                  </div>
+               </div>
+            </div>`
+}
+
+//funzione per ciclare l'array e ad ogni ciclo concatenare la funzione che general al struttura html
+const teamSplitterCards = (teamArray) =>{
+  const teamCardsContainer = document.getElementById('team-cards-container');
+  let singleCard = '';
+
+  for(let member of teamArray){
+    singleCard += generateMemberCard(member); 
+  }
+  
+  teamCardsContainer.innerHTML = singleCard;
+}
+
+teamSplitterCards(teamMembers);

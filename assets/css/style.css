@@ -65,6 +65,7 @@ div.card{
 
 .card .card-img{
    width: 100px;
+   height: 100px;
 }
 
 .card-img img{
@@ -72,18 +73,19 @@ div.card{
 }
 
 .card .card-text{
-   padding: 20px;
+   padding: 10px;
 }
 
 .card-text h4{
    text-transform: uppercase;
-   margin-bottom: 5px;
+   margin: 4px;
 }
 
 .card-text p.role{
-   margin-bottom: 5px;
+   margin: 4px;
 }
 
 .card-text p.mail{
    color: #3DABFB;
 }
+
