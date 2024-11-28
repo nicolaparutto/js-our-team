@@ -20,7 +20,7 @@ body{
 
 .container{
    margin: 0 auto;
-   width: 1200px;
+   max-width: 1200px;
 }
 
 .text-center{
@@ -31,6 +31,7 @@ body{
 /* header style */
 div.title{
    margin: 80px 0px;
+   width: 100%;
 }
 
 .title h1{
@@ -89,3 +90,29 @@ div.card{
    color: #3DABFB;
 }
 
+
+
+/* responsive media queries */
+@media (max-width: 1200px){
+   .container{
+      max-width: 1000px;
+   }
+}
+
+@media (max-width: 1000px){
+   .container{
+      max-width: 800px;
+   }
+   div.card-col{
+      width: calc(100% / 2);
+   }
+}
+
+@media (max-width: 750px){
+   .container{
+      max-width: 550px;
+   }
+   div.card-col{
+      width: calc(100% / 1);
+   }
+}
